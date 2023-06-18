@@ -1,0 +1,12 @@
+.main-container {
+    height: 100vh;
+    background-color: var(--charcoal-grey);
+}
+
+@media (min-width: 400px) {
+    .main-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,7 +1,8 @@
-import './App.css';
+import './App.scss';
+import NewsletterSignUp from "./NewsletterSignUp.jsx";
 
 export default function App() {
-  return <div className="main-container">
-    <h1>Frontend Mentor - Newsletter sign-up form with success message solution</h1>
-  </div>
+    return <div className="main-container">
+        <NewsletterSignUp />
+    </div>
 }

@@ -6,6 +6,15 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+
+    --tomato: hsl(4, 100%, 67%);
+    --tomato-desaturated: hsl(7, 100%, 90%);
+    --pink: hsl(347, 100%, 66%);
+    --orange: 	hsl(13, 100%, 62%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
 }
 
 * {
@@ -13,4 +22,13 @@
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
+}
+
+
+input, button {
+    outline: none !important;
+}
+
+p {
+    font-size: 16px;
 }
