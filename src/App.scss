@@ -1,12 +1,13 @@
 .main-container {
-    height: 100vh;
     background-color: var(--charcoal-grey);
 }
 
 @media (min-width: 400px) {
     .main-container {
+        height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-flow: column;
     }
 }
