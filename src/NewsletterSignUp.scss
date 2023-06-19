@@ -39,68 +39,6 @@
                 }
             }
         }
-
-        #nf--form {
-            margin-top: 30px;
-            padding-bottom: 20px;
-
-            .input-area {
-                display: grid;
-                grid-template-areas:
-                "label errorP"
-                "input input";
-                gap: 10px;
-                label, p {
-                    font-size: .86rem;
-                    font-weight: 700;
-                }
-                label {
-                    grid-area: label;
-                }
-                p {
-                    grid-area: errorP;
-                    text-align: right;
-                    color: var(--tomato);
-                }
-                input {
-                    grid-area: input;
-                    padding: 15px 20px;
-                    border: 2px solid var(--grey);
-                    font-size: 16px;
-                    border-radius: 5px;
-                    color: var(--dark-slate-grey);
-                    transition: .13s ease-in-out;
-
-                    &:hover, &:focus {
-                        border-color: var(--dark-slate-grey);
-                    }
-
-                    &.error {
-                        background-color: var(--tomato-desaturated);
-                        color: var(--tomato);
-                        border-color: var(--tomato);
-                    }
-                }
-                margin-bottom: 20px;
-            }
-
-            button {
-                width: 100%;
-                padding: 15px;
-                border: none;
-                font-size: 16px;
-                border-radius: 5px;
-                background: var(--dark-slate-grey);
-                font-weight: 700;
-                color: var(--white);
-                transition: background-color .13s ease-in-out;
-                cursor: pointer;
-
-                &:hover, &:focus {
-                    background: linear-gradient(90deg, var(--pink), var(--orange));
-                }
-            }
-        }
     }
     .image-container {
         grid-area: imageContainer;
