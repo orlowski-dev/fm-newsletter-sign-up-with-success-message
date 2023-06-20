@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/orlowski-dev/fm-newsletter-sign-up-with-success-message)
-- Live Site URL: [Add live site URL here](https://https://orlowski-dev.github.io/fm-newsletter-sign-up-with-success-message)
+- Live Site URL: [GitHub Pages](https://https://orlowski-dev.github.io/fm-newsletter-sign-up-with-success-message)
 
 ## My process
 
