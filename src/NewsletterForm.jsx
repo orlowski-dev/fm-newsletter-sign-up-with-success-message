@@ -49,7 +49,7 @@ export default function NewsletterForm(props) {
             <p className="nf--error-email"
                ref={emailErrorRef}
             ></p>
-            <input type="email"
+            <input type="text"
                    placeholder="email@company.com"
                    id="nf--email"
                    ref={emailInputRef}
