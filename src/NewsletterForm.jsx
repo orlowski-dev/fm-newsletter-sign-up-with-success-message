@@ -1,7 +1,7 @@
 import './NewsletterForm.scss';
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
-export default function NewsletterForm() {
+export default function NewsletterForm(props) {
     const emailInputRef = useRef(null);
     const emailErrorRef = useRef(null);
     const [emailInputValue, setEmailInputValue] = useState('');
@@ -10,20 +10,25 @@ export default function NewsletterForm() {
         /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
     const isEmailInputValid = () => {
         if (emailInputValue.length === 0 || !isEmail(emailInputValue)) {
-            setIsEmailValid(false);
-            return;
+            return false;
         }
-        setIsEmailValid(true);
+        return true;
     };
+
+    useEffect(() => {
+        setIsEmailValid(isEmailInputValid());
+    }, [emailInputValue]);
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        isEmailInputValid();
         setInputAndError();
 
-        if (isEmailValid) {
-            e.target.submit();
+        if (!isEmailValid) {
+            return;
         }
+
+        
+        props.parentFun(emailInputValue);
     }
 
     const setInputAndError = () => {
@@ -48,10 +53,11 @@ export default function NewsletterForm() {
                    placeholder="email@company.com"
                    id="nf--email"
                    ref={emailInputRef}
-                   onKeyDown={(e) => setEmailInputValue(e.target.value)}
+                   onChange={(e) => {setEmailInputValue(e.target.value);}}
             />
         </div>
         <button type="submit"
+                className="button-primary"
         >Subscribe to monthly newsletter</button>
     </form>
 }

@@ -4,7 +4,7 @@ import IllustrationMobile from '../src/assets/images/illustration-sign-up-mobile
 import NewsletterForm from "./NewsletterForm.jsx";
 import {useEffect, useState} from "react";
 
-export default function NewsletterSignUp() {
+export default function NewsletterSignUp(props) {
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [illustration, setIllustration] = useState('');
@@ -12,7 +12,7 @@ export default function NewsletterSignUp() {
     useEffect(() => {
         const handleWindowResize = () => {
             setWindowWidth(window.innerWidth);
-        }
+        };
 
         window.addEventListener('resize', handleWindowResize);
 
@@ -22,7 +22,7 @@ export default function NewsletterSignUp() {
         return () => {
             window.removeEventListener('resize', handleWindowResize);
         }
-    }, [windowWidth])
+    }, [windowWidth]);
 
     return <article className="newsletter-component">
         <section className="main-content">
@@ -33,7 +33,7 @@ export default function NewsletterSignUp() {
                 <li>Measuring to ensure updates are a success</li>
                 <li>And much more!</li>
             </ul>
-            <NewsletterForm />
+            <NewsletterForm parentFun={props.parentFun}/>
         </section>
         <div className="image-container">
             <img src={illustration} alt="illustration"/>

@@ -1,5 +1,32 @@
+h1 {
+    font-size: 2.5rem;
+    color: var(--dark-slate-grey);
+}
+
+p {
+    color: var(--charcoal-grey);
+}
+
 .main-container {
     background-color: var(--charcoal-grey);
+
+    .button-primary {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        font-size: 16px;
+        border-radius: 5px;
+        background: var(--dark-slate-grey);
+        font-weight: 700;
+        color: var(--white);
+        transition: background-color .13s ease-in-out;
+        cursor: pointer;
+
+        &:hover, &:focus {
+            background: linear-gradient(90deg, var(--pink), var(--orange));
+            box-shadow: 0 15px 15px var(--tomato-desaturated);
+        }
+    }
 }
 
 @media (min-width: 400px) {
